@@ -113,9 +113,8 @@ on:
         required: false
         type: string
         default: ''
-  schedule:
-    # Every 12 hours, off the hour to avoid the top-of-hour runner crunch.
-    - cron: '20 7,19 * * *'
+# schedule trigger removed (fork): the 12-hour cron kept failing at runner
+# startup on this fork and spamming failure alerts; manual dispatch is kept.
 
 permissions:
   contents: read
